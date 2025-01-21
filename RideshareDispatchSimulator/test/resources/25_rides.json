@@ -1,0 +1,356 @@
+{
+  "drivers": [
+    {
+      "driverId": "Driver-1"
+    },
+    {
+      "driverId": "Driver-2"
+    },
+    {
+      "driverId": "Driver-3"
+    },
+    {
+      "driverId": "Driver-4"
+    },
+    {
+      "driverId": "Driver-5"
+    },
+    {
+      "driverId": "Driver-6"
+    },
+    {
+      "driverId": "Driver-7"
+    },
+    {
+      "driverId": "Driver-8"
+    },
+    {
+      "driverId": "Driver-9"
+    },
+    {
+      "driverId": "Driver-10"
+    },
+    {
+      "driverId": "Driver-11"
+    },
+    {
+      "driverId": "Driver-12"
+    },
+    {
+      "driverId": "Driver-13"
+    },
+    {
+      "driverId": "Driver-14"
+    },
+    {
+      "driverId": "Driver-15"
+    },
+    {
+      "driverId": "Driver-16"
+    },
+    {
+      "driverId": "Driver-17"
+    },
+    {
+      "driverId": "Driver-18"
+    },
+    {
+      "driverId": "Driver-19"
+    },
+    {
+      "driverId": "Driver-20"
+    },
+    {
+      "driverId": "Driver-21"
+    },
+    {
+      "driverId": "Driver-22"
+    },
+    {
+      "driverId": "Driver-23"
+    },
+    {
+      "driverId": "Driver-24"
+    },
+    {
+      "driverId": "Driver-25"
+    },
+    {
+      "driverId": "Driver-26"
+    },
+    {
+      "driverId": "Driver-27"
+    },
+    {
+      "driverId": "Driver-28"
+    },
+    {
+      "driverId": "Driver-29"
+    },
+    {
+      "driverId": "Driver-30"
+    },
+    {
+      "driverId": "Driver-31"
+    },
+    {
+      "driverId": "Driver-32"
+    },
+    {
+      "driverId": "Driver-33"
+    },
+    {
+      "driverId": "Driver-34"
+    },
+    {
+      "driverId": "Driver-35"
+    },
+    {
+      "driverId": "Driver-36"
+    },
+    {
+      "driverId": "Driver-37"
+    },
+    {
+      "driverId": "Driver-38"
+    },
+    {
+      "driverId": "Driver-39"
+    },
+    {
+      "driverId": "Driver-40"
+    },
+    {
+      "driverId": "Driver-41"
+    },
+    {
+      "driverId": "Driver-42"
+    },
+    {
+      "driverId": "Driver-43"
+    },
+    {
+      "driverId": "Driver-44"
+    },
+    {
+      "driverId": "Driver-45"
+    },
+    {
+      "driverId": "Driver-46"
+    },
+    {
+      "driverId": "Driver-47"
+    },
+    {
+      "driverId": "Driver-48"
+    },
+    {
+      "driverId": "Driver-49"
+    },
+    {
+      "driverId": "Driver-50"
+    }
+  ],
+  "rideRequests": [
+    {
+      "customerId": "C1",
+      "startLocation": "Point-A",
+      "endLocation": "Point-B",
+      "distance": 19.767210231443066,
+      "type": "Express pick-up",
+      "requestTime": 1000
+    },
+    {
+      "customerId": "C2",
+      "startLocation": "Point-B",
+      "endLocation": "Point-C",
+      "distance": 23.21762580492696,
+      "type": "Standard pick-up",
+      "requestTime": 1500
+    },
+    {
+      "customerId": "C3",
+      "startLocation": "Point-C",
+      "endLocation": "Point-D",
+      "distance": 29.610359096314482,
+      "type": "Environmentally conscious pick-up",
+      "requestTime": 2000
+    },
+    {
+      "customerId": "C4",
+      "startLocation": "Point-D",
+      "endLocation": "Point-E",
+      "distance": 14.774689582236334,
+      "type": "Express pick-up",
+      "requestTime": 2500
+    },
+    {
+      "customerId": "C5",
+      "startLocation": "Point-E",
+      "endLocation": "Point-F",
+      "distance": 23.380726926324577,
+      "type": "Standard pick-up",
+      "requestTime": 3000
+    },
+    {
+      "customerId": "C6",
+      "startLocation": "Point-F",
+      "endLocation": "Point-G",
+      "distance": 9.083434222978275,
+      "type": "Wait-and-save pick-up",
+      "requestTime": 3500
+    },
+    {
+      "customerId": "C7",
+      "startLocation": "Point-G",
+      "endLocation": "Point-H",
+      "distance": 19.01453489487197,
+      "type": "Express pick-up",
+      "requestTime": 4000
+    },
+    {
+      "customerId": "C8",
+      "startLocation": "Point-H",
+      "endLocation": "Point-I",
+      "distance": 26.736542503177144,
+      "type": "Standard pick-up",
+      "requestTime": 4500
+    },
+    {
+      "customerId": "C9",
+      "startLocation": "Point-I",
+      "endLocation": "Point-J",
+      "distance": 22.115484899107926,
+      "type": "Environmentally conscious pick-up",
+      "requestTime": 5000
+    },
+    {
+      "customerId": "C10",
+      "startLocation": "Point-J",
+      "endLocation": "Point-K",
+      "distance": 19.517258531560216,
+      "type": "Standard pick-up",
+      "requestTime": 5500
+    },
+    {
+      "customerId": "C11",
+      "startLocation": "Point-K",
+      "endLocation": "Point-L",
+      "distance": 22.901061013005634,
+      "type": "Wait-and-save pick-up",
+      "requestTime": 6000
+    },
+    {
+      "customerId": "C12",
+      "startLocation": "Point-L",
+      "endLocation": "Point-M",
+      "distance": 14.313058964946105,
+      "type": "Express pick-up",
+      "requestTime": 6500
+    },
+    {
+      "customerId": "C13",
+      "startLocation": "Point-M",
+      "endLocation": "Point-N",
+      "distance": 5.183487658337822,
+      "type": "Standard pick-up",
+      "requestTime": 7000
+    },
+    {
+      "customerId": "C14",
+      "startLocation": "Point-N",
+      "endLocation": "Point-O",
+      "distance": 5.645426501317278,
+      "type": "Environmentally conscious pick-up",
+      "requestTime": 7500
+    },
+    {
+      "customerId": "C15",
+      "startLocation": "Point-O",
+      "endLocation": "Point-P",
+      "distance": 21.32659899864168,
+      "type": "Environmentally conscious pick-up",
+      "requestTime": 8000
+    },
+    {
+      "customerId": "C16",
+      "startLocation": "Point-P",
+      "endLocation": "Point-Q",
+      "distance": 6.022355021904736,
+      "type": "Environmentally conscious pick-up",
+      "requestTime": 8500
+    },
+    {
+      "customerId": "C17",
+      "startLocation": "Point-Q",
+      "endLocation": "Point-R",
+      "distance": 20.259943402243284,
+      "type": "Wait-and-save pick-up",
+      "requestTime": 9000
+    },
+    {
+      "customerId": "C18",
+      "startLocation": "Point-R",
+      "endLocation": "Point-S",
+      "distance": 24.848647299795765,
+      "type": "Express pick-up",
+      "requestTime": 9500
+    },
+    {
+      "customerId": "C19",
+      "startLocation": "Point-S",
+      "endLocation": "Point-T",
+      "distance": 15.054790365858853,
+      "type": "Wait-and-save pick-up",
+      "requestTime": 10000
+    },
+    {
+      "customerId": "C20",
+      "startLocation": "Point-T",
+      "endLocation": "Point-U",
+      "distance": 26.653570166933335,
+      "type": "Standard pick-up",
+      "requestTime": 10500
+    },
+    {
+      "customerId": "C21",
+      "startLocation": "Point-U",
+      "endLocation": "Point-V",
+      "distance": 16.13398734154441,
+      "type": "Environmentally conscious pick-up",
+      "requestTime": 11000
+    },
+    {
+      "customerId": "C22",
+      "startLocation": "Point-V",
+      "endLocation": "Point-W",
+      "distance": 12.306842671266132,
+      "type": "Standard pick-up",
+      "requestTime": 11500
+    },
+    {
+      "customerId": "C23",
+      "startLocation": "Point-W",
+      "endLocation": "Point-X",
+      "distance": 9.747338005465103,
+      "type": "Express pick-up",
+      "requestTime": 12000
+    },
+    {
+      "customerId": "C24",
+      "startLocation": "Point-X",
+      "endLocation": "Point-Y",
+      "distance": 11.285927839499545,
+      "type": "Wait-and-save pick-up",
+      "requestTime": 12500
+    },
+    {
+      "customerId": "C25",
+      "startLocation": "Point-Y",
+      "endLocation": "Point-Z",
+      "distance": 10.232840082256645,
+      "type": "Express pick-up",
+      "requestTime": 13000
+    }
+  ]
+}
