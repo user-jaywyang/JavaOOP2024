@@ -1,0 +1,112 @@
+{
+  "drivers": [
+    { "driverId": "Driver-1" },
+    { "driverId": "Driver-2" },
+    { "driverId": "Driver-3" },
+    { "driverId": "Driver-4" },
+    { "driverId": "Driver-5" },
+    { "driverId": "Driver-6" },
+    { "driverId": "Driver-7" },
+    { "driverId": "Driver-8" },
+    { "driverId": "Driver-9" },
+    { "driverId": "Driver-10" }
+  ],
+  "rideRequests": [
+    {
+      "customerId": "C001",
+      "startLocation": "Point A",
+      "endLocation": "Point B",
+      "distance": 10.0,
+      "type": "Express pick-up",
+      "requestTime": 1000
+    },
+    {
+      "customerId": "C002",
+      "startLocation": "Point C",
+      "endLocation": "Point D",
+      "distance": 20.0,
+      "type": "Standard pick-up",
+      "requestTime": 2000
+    },
+    {
+      "customerId": "C003",
+      "startLocation": "Point E",
+      "endLocation": "Point F",
+      "distance": 5.0,
+      "type": "Environmentally conscious pick-up",
+      "requestTime": 1500
+    },
+    {
+      "customerId": "C004",
+      "startLocation": "Point G",
+      "endLocation": "Point H",
+      "distance": 15.0,
+      "type": "Wait-and-save pick-up",
+      "requestTime": 3000
+    },
+    {
+      "customerId": "C005",
+      "startLocation": "Point I",
+      "endLocation": "Point J",
+      "distance": 8.0,
+      "type": "Express pick-up",
+      "requestTime": 2500
+    },
+    {
+      "customerId": "C006",
+      "startLocation": "Point K",
+      "endLocation": "Point L",
+      "distance": 12.0,
+      "type": "Standard pick-up",
+      "requestTime": 3500
+    },
+    {
+      "customerId": "C007",
+      "startLocation": "Point M",
+      "endLocation": "Point N",
+      "distance": 18.0,
+      "type": "Express pick-up",
+      "requestTime": 4000
+    },
+    {
+      "customerId": "C008",
+      "startLocation": "Point O",
+      "endLocation": "Point P",
+      "distance": 25.0,
+      "type": "Wait-and-save pick-up",
+      "requestTime": 4500
+    },
+    {
+      "customerId": "C009",
+      "startLocation": "Point Q",
+      "endLocation": "Point R",
+      "distance": 7.0,
+      "type": "Environmentally conscious pick-up",
+      "requestTime": 5000
+    },
+    {
+      "customerId": "C010",
+      "startLocation": "Point S",
+      "endLocation": "Point T",
+      "distance": 10.0,
+      "type": "Express pick-up",
+      "requestTime": 5500
+    },
+    {
+      "customerId": "C011",
+      "startLocation": "Point U",
+      "endLocation": "Point V",
+      "distance": 22.0,
+      "type": "Standard pick-up",
+      "requestTime": 6000
+    },
+    {
+      "customerId": "C012",
+      "startLocation": "Point W",
+      "endLocation": "Point X",
+      "distance": 9.0,
+      "type": "Environmentally conscious pick-up",
+      "requestTime": 6500
+    }
+  ]
+}
