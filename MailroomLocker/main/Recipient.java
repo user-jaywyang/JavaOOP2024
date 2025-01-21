@@ -3,146 +3,106 @@ package problem2;
 import java.util.Objects;
 
 /**
- * The MailItem class represents a mail item with dimensions (width, height, depth)
- * and a recipient. It provides methods to access and modify these fields, along
- * with proper validation for the dimensions.
+ * The Recipient class represents an individual with a first name, last name, and email.
+ * It provides methods to access and modify these fields, as well as methods to compare two Recipient objects.
  */
-public class MailItem {
+public class Recipient {
 
-  // Width, height, and depth are expected to be greater than or equal to 1
-  private int width;
-  private int height;
-  private int depth;
-  private Recipient recipient;
-  private static final int MAX_MEASUREMENT = 1;
+  private String firstName;
+  private String lastName;
+  private String email;
 
   /**
-   * Constructs a new MailItem with the specified width, height, depth, and recipient.
+   * Constructs a new Recipient with the specified first name, last name, and email.
    *
-   * @param width     the width of the mail item (must be >= 1)
-   * @param height    the height of the mail item (must be >= 1)
-   * @param depth     the depth of the mail item (must be >= 1)
-   * @param recipient the recipient of the mail item
+   * @param firstName the first name of the recipient
+   * @param lastName  the last name of the recipient
+   * @param email     the email of the recipient
    */
-  public MailItem(int width, int height, int depth, Recipient recipient) {
-    this.width = width;
-    this.height = height;
-    this.depth = depth;
-    this.recipient = recipient;
+  public Recipient(String firstName, String lastName, String email) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.email = email;
   }
 
   /**
-   * Returns the width of the mail item.
+   * Returns the first name of the recipient.
    *
-   * @return the width of the mail item
+   * @return the first name of the recipient
    */
-  public int getWidth() {
-    return width;
+  public String getFirstName() {
+    return firstName;
   }
 
   /**
-   * Sets a new width for the mail item. The width must be greater than or equal to 1.
+   * Sets a new first name for the recipient.
    *
-   * @param width the new width of the mail item
-   * @throws InvalidMeasurementException if the width is less than 1
+   * @param newName the new first name of the recipient
    */
-  public void setWidth(int width) throws InvalidMeasurementException {
-    if (width >= MAX_MEASUREMENT) {
-      this.width = width;
-    } else {
-      throw new InvalidMeasurementException("width must be greater than 1");
-    }
+  public void setFirstName(String newName) {
+    this.firstName = newName;
   }
 
   /**
-   * Returns the height of the mail item.
+   * Returns the last name of the recipient.
    *
-   * @return the height of the mail item
+   * @return the last name of the recipient
    */
-  public int getHeight() {
-    return height;
+  public String getLastName() {
+    return lastName;
   }
 
   /**
-   * Sets a new height for the mail item. The height must be greater than or equal to 1.
+   * Sets a new last name for the recipient.
    *
-   * @param height the new height of the mail item
-   * @throws InvalidMeasurementException if the height is less than 1
+   * @param newName the new last name of the recipient
    */
-  public void setHeight(int height) throws InvalidMeasurementException {
-    if (height >= MAX_MEASUREMENT) {
-      this.height = height;
-    } else {
-      throw new InvalidMeasurementException("height must be greater than 1");
-    }
+  public void setLastName(String newName) {
+    this.lastName = newName;
   }
 
   /**
-   * Returns the depth of the mail item.
+   * Returns the email of the recipient.
    *
-   * @return the depth of the mail item
+   * @return the email of the recipient
    */
-  public int getDepth() {
-    return depth;
+  public String getEmail() {
+    return email;
   }
 
   /**
-   * Sets a new depth for the mail item. The depth must be greater than or equal to 1.
+   * Sets a new email for the recipient.
    *
-   * @param depth the new depth of the mail item
-   * @throws InvalidMeasurementException if the depth is less than 1
+   * @param newEmail the new email of the recipient
    */
-  public void setDepth(int depth) throws InvalidMeasurementException {
-    if (depth >= MAX_MEASUREMENT) {
-      this.depth = depth;
-    } else {
-      throw new InvalidMeasurementException("depth must be greater than 1");
-    }
+  public void setEmail(String newEmail) {
+    this.email = newEmail;
   }
 
   /**
-   * Returns the recipient of the mail item.
+   * Compares this recipient to another object. Returns true if the specified object is also
+   * a Recipient and has the same first name, last name, and email as this recipient.
    *
-   * @return the recipient of the mail item
-   */
-  public Recipient getRecipient() {
-    return recipient;
-  }
-
-  /**
-   * Sets a new recipient for the mail item.
-   *
-   * @param recipient the new recipient of the mail item
-   */
-  public void setRecipient(Recipient recipient) {
-    this.recipient = recipient;
-  }
-
-  /**
-   * Compares this mail item to another object. Returns true if the specified object is also
-   * a MailItem and has the same width, height, depth, and recipient as this mail item.
-   *
-   * @param o the object to compare with this mail item
-   * @return true if the specified object is equal to this mail item, false otherwise
+   * @param o the object to compare with this recipient
+   * @return true if the specified object is equal to this recipient, false otherwise
    */
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
-    MailItem mailItem = (MailItem) o;
-    return width == mailItem.width &&
-        height == mailItem.height &&
-        depth == mailItem.depth &&
-        recipient.equals(mailItem.recipient);
+    Recipient recipient = (Recipient) o;
+    return Objects.equals(firstName, recipient.firstName) &&
+        Objects.equals(lastName, recipient.lastName) &&
+        Objects.equals(email, recipient.email);
   }
 
   /**
-   * Returns the hash code for this mail item based on its width, height, depth, and recipient.
+   * Returns the hash code for this recipient based on its first name, last name, and email.
    *
-   * @return the hash code of this mail item
+   * @return the hash code of this recipient
    */
   @Override
   public int hashCode() {
-    return Objects.hash(width, height, depth, recipient);
+    return Objects.hash(firstName, lastName, email);
   }
 }
