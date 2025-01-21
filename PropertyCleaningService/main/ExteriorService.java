@@ -1,112 +1,134 @@
 package problem1;
 
-import java.util.Objects;
-
 /**
- * The ElectricalService class represents a service for electrical work. It extends the SpecialistService class
- * and follows specific rules for licensed employees, complexity of the job, and additional permitting fees.
+ * The ExteriorService class is an abstract class representing exterior property services.
+ * It implements the Service interface and includes common attributes such as property address,
+ * property size, service frequency, and the number of previous services.
  */
-public class ElectricalService extends SpecialistService {
+public abstract class ExteriorService implements Service {
+
+  /** The base rate per hour for exterior services. */
+  private static final double BASE_RATE_PER_HOUR = 80.0;
+
+  /** The number of hours required for small properties. */
+  private static final int SMALL_PROPERTY_HOURS = 1;
+
+  /** The number of hours required for medium properties. */
+  private static final int MEDIUM_PROPERTY_HOURS = 2;
+
+  /** The number of hours required for large properties. */
+  private static final int LARGE_PROPERTY_HOURS = 4;
+
+  /** The address of the property where the service is provided. */
+  private String propertyAddress;
+
+  /** The size of the property (SMALL, MEDIUM, LARGE). */
+  private PropertySize propertySize;
+
+  /** Indicates whether the service is recurring on a monthly basis. */
+  private boolean monthly;
+
+  /** The number of previous services provided at the property address. */
+  private int previousServicesCount;
 
 
-  /** The permitting fee required for electrical services. */
-  private static final double PERMITTING_FEE = 50.0;
-
-  /** The maximum number of licensed employees allowed for electrical services. */
-  private static final int MAX_LICENSED_EMPLOYEES = 4;
 
   /**
-   * Constructs a new ElectricalService instance with the provided details about the property, service frequency,
-   * number of licensed employees, and complexity of the work. Ensures that the number of licensed employees does not
-   * exceed the maximum limit.
+   * Constructs an ExteriorService object with the specified property details.
    *
    * @param propertyAddress the address of the property where the service is being provided
    * @param propertySize the size of the property (SMALL, MEDIUM, LARGE)
    * @param monthly whether the service is a recurring monthly service
    * @param previousServicesCount the number of previous services provided at the address
-   * @param licensedEmployees the number of licensed employees assigned to the service
-   * @param isComplex whether the electrical work is considered complex
-   * @throws InvalidElectricalEmployeeException if the number of licensed employees exceeds the allowed maximum
    */
-  public ElectricalService(String propertyAddress, PropertySize propertySize, boolean monthly, int previousServicesCount,
-      int licensedEmployees, boolean isComplex) throws InvalidElectricalEmployeeException {
-    super(propertyAddress, propertySize, monthly, previousServicesCount, validateLicensedEmployees(licensedEmployees), isComplex);
+  public ExteriorService(String propertyAddress, PropertySize propertySize, boolean monthly, int previousServicesCount) {
+    this.propertyAddress = propertyAddress;
+    this.propertySize = propertySize;
+    this.monthly = monthly;
+    this.previousServicesCount = previousServicesCount;
   }
 
   /**
-   * Validates the number of licensed employees, ensuring it does not exceed the maximum limit allowed
-   * for electrical services.
+   * Returns the address of the property where the service is being provided.
    *
-   * @param licensedEmployees the number of licensed employees assigned to the service
-   * @return the validated number of licensed employees
-   * @throws InvalidElectricalEmployeeException if the number of licensed employees exceeds the allowed maximum
-   */
-  private static int validateLicensedEmployees(int licensedEmployees) throws InvalidElectricalEmployeeException {
-    if (licensedEmployees > MAX_LICENSED_EMPLOYEES) {
-      throw new InvalidElectricalEmployeeException("Electrical services cannot have more than " + MAX_LICENSED_EMPLOYEES + " licensed employees.");
-    }
-    return licensedEmployees;
-  }
-
-  /**
-   * Calculates the price of the electrical service based on the number of licensed employees and the permitting fee.
-   *
-   * @return the total price for the electrical service
+   * @return the property address
    */
   @Override
-  public double calculatePrice() {
-    int licensedEmployees = getLicensedEmployees();
-    double price = getBaseRate() * licensedEmployees;  // Calculate base price for the service
-    price += PERMITTING_FEE;  // Add the permitting fee
-    return price;
+  public String getPropertyAddress() {
+    return propertyAddress;
   }
 
   /**
-   * Checks if this ElectricalService object is equal to another object.
+   * Returns the size of the property (SMALL, MEDIUM, LARGE).
    *
-   * @param o the object to be compared
-   * @return true if the objects are equal, false otherwise
+   * @return the property size
    */
   @Override
-  public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-    ElectricalService that = (ElectricalService) o;
-    return getLicensedEmployees() == that.getLicensedEmployees() &&
-        isComplex() == that.isComplex() &&
-        Objects.equals(getPropertyAddress(), that.getPropertyAddress()) &&
-        getPropertySize() == that.getPropertySize() &&
-        isMonthly() == that.isMonthly() &&
-        getPreviousServicesCount() == that.getPreviousServicesCount();
+  public PropertySize getPropertySize() {
+    return propertySize;
   }
 
   /**
-   * Generates a hash code for this object based on its property details and service.
+   * Returns whether the service is a recurring monthly service.
    *
-   * @return the hash code for this object
+   * @return true if the service is monthly, false otherwise
    */
   @Override
-  public int hashCode() {
-    return Objects.hash(getPropertyAddress(), getPropertySize(), isMonthly(), getPreviousServicesCount(), getLicensedEmployees(), isComplex());
+  public boolean isMonthly() {
+    return monthly;
   }
 
   /**
-   * Returns a string representation of this ElectricalService object, including details about the property, service,
-   * and pricing.
+   * Returns the number of previous services provided at the property address.
    *
-   * @return a string representation of the electrical service
+   * @return the number of previous services
    */
   @Override
-  public String toString() {
-    return "ElectricalService{" +
-        "propertyAddress='" + getPropertyAddress() + '\'' +
-        ", propertySize=" + getPropertySize() +
-        ", monthly=" + isMonthly() +
-        ", previousServicesCount=" + getPreviousServicesCount() +
-        ", licensedEmployees=" + getLicensedEmployees() +
-        ", isComplex=" + isComplex() +
-        ", permittingFee=" + PERMITTING_FEE +
-        ", baseRatePerEmployee=" + getBaseRate() +
-        '}';
+  public int getPreviousServicesCount() {
+    return previousServicesCount;
   }
+
+  /**
+   * Returns the base rate per hour for exterior services.
+   *
+   * @return the base rate per hour
+   */
+  public double getBaseRate() {
+    return BASE_RATE_PER_HOUR;
+  }
+
+  /**
+   * Returns Minimum hours need for Small size property
+   *
+   * @return minimum hours for SMALL
+   */
+  public int getSmallPropertyHours() {
+    return SMALL_PROPERTY_HOURS;
+  }
+  /**
+   * Returns Minimum hours need for Medium size property
+   *
+   * @return minimum hours for MEDIUM
+   */
+  public int getMediumPropertyHours() {
+    return MEDIUM_PROPERTY_HOURS;
+  }
+
+  /**
+   * Returns Minimum hours need for Large size property
+   *
+   * @return minimum hours for LARGE
+   */
+
+  public int getLargePropertyHours() {
+    return LARGE_PROPERTY_HOURS;
+
+  }
+  /**
+   * Abstract method to calculate the total price for the service.
+   *
+   * @return the total price for the service
+   */
+  @Override
+  public abstract double calculatePrice();
 }
