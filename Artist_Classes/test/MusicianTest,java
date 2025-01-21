@@ -1,0 +1,38 @@
+package problem1;
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+public class MusicianTest {
+
+  private Musician musician;
+
+  @BeforeEach
+  public void setUp() throws InvalidAgeException {
+    Name name = new Name("Freddie", "Mercury");
+    String[] genres = {"Rock", "Opera"};
+    String[] awards = {"Grammy Award"};
+    String recordingCompany = "EMI";
+    String lastRecordAlbum = "A Night at the Opera";
+
+    musician = new Musician(name, 45, genres, awards, recordingCompany, lastRecordAlbum);
+  }
+
+  @Test
+  public void testMusicianCreation() {
+    assertEquals("Freddie", musician.getName().getFirstName());
+    assertEquals("Mercury", musician.getName().getLastName());
+    assertEquals(45, musician.getAge());
+    assertArrayEquals(new String[]{"Rock", "Opera"}, musician.getGenres());
+    assertArrayEquals(new String[]{"Grammy Award"}, musician.getAwards());
+    assertEquals("EMI", musician.getRecordingCompany());
+    assertEquals("A Night at the Opera", musician.getLastRecordAlbum());
+  }
+
+  @Test
+  public void testReceiveAward() {
+    musician.receiveAward("Rock Icon Award");
+    assertArrayEquals(new String[]{"Grammy Award", "Rock Icon Award"}, musician.getAwards());
+  }
+}
